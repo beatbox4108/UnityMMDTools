@@ -5,6 +5,12 @@ All notable changes to this package will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+
+- Decode RLE-compressed TGA textures (24/32-bit true color and 8-bit grayscale), including mixed raw and run-length packets. Honor image IDs and image origins, preserve 32-bit alpha, and use opaque alpha for 24-bit textures. Reject unsupported formats, invalid dimensions, and RLE packets that exceed the image bounds.
+
 ## [0.5.1] - 2026-09-02
 
 ### Fixed
